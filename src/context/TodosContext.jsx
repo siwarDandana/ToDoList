@@ -21,7 +21,7 @@ export const TodosProvider = ({ children }) => {
 
   useEffect(() => {
     // storing todos items
-    const temp = JSON.stringify(todos);
+    const temp = JSON.stringify(todos); 
     localStorage.setItem('todos', temp);
   }, [todos]);
 
@@ -49,7 +49,7 @@ export const TodosProvider = ({ children }) => {
 
   const addTodoItem = (title) => {
     const newTodo = {
-      id: uuidv4(),
+      id: uuidv4(), //gen id random
       title: title,
       completed: false,
     };
